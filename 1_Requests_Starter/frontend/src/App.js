@@ -65,7 +65,7 @@ class App extends Component {
         this.setState({books})
       },
       error: (error) => {
-        alert('Unable to update the rating.')
+        alert('Unable to update the rating.', error)
         return;
       }
     })
@@ -118,6 +118,7 @@ class App extends Component {
           onClick={() => {this.selectPage(i)}}>{i}
         </div>)
     }
+    console.log(pageNumbers)
     return pageNumbers;
   }
 
